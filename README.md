@@ -10,8 +10,8 @@ You don't need any experience with Linux to start with, but a basic working know
 * An 8Gb or higher capacity SD card
   * Cards are marketed largely by their sustained write speed, which has little bearing on the overall performance of the Raspberry Pi. Go online and shop around: there are more forums and web pages *about* SD card choices than there *are* SD card choices. I used a SanDisk 32Gb Class 10.
 * An SD card reader, connected to your PC
-* Any Roguelike fan is likely to already have a favorite, but you'll need software to access your Pi from a different computer via SSH (and later Telnet). I recommend [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
-* 
+* A terminal program on a different PC
+  * Any software that can access your Pi from a different computer via SSH (and later Telnet, to play the games). I recommend [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html), as it does both quite well.
 
 Recommended but not necessary:
 
@@ -55,17 +55,12 @@ Got that? Whenever something cool happens, power down and back up your data. You
 
 ### Compiling and Configuring Software
 
-#### Game 1: Nethack
-
-1. SSH into your Pi. Start with the base software to download and compile stuff.
-```shell
-$ sudo apt-get -y install git-core
-```
+1. SSH into your Pi.
 2. Pull the setup files from github:
 ```shell
 $ git clone https://github.com/MasterShizzle/RogueberryServer.git
 $ cd RogueberryServer
-$ nano install.sh
+$ nano setup.sh
 ```
 The script by default installs everything on /opt/rogueberry/.
 
